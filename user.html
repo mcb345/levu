@@ -10,15 +10,12 @@
 </head>
 
 <body>
-    <div class="row">
+    <div class="row hidden-sm hidden-xs">
         <nav class="navbar navbar-default navbar-fixed-top cm-topbar" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <a class="cm-white" href="#"><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;Logout</a>
                     </button>
                     <!--                    Title here-->
                     <a class="navbar-brand cm-white" href="mainmenu.php">Levu 2.0</a>
@@ -32,7 +29,7 @@
         </nav>
     </div>
     <div class="container-fluid">
-        <div class="row cm-navbar">
+        <div class="row cm-navbar hidden-xs hidden-sm">
             <div class="col-md-4">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
@@ -53,7 +50,7 @@
                 <br>You completed 23 data entry
             </div>
         </div>
-        <div class="row">
+        <div class="row hidden-xs hidden-sm">
             <div class="col-md-12">
                 <div class="panel panel-danger">
                     <div class="panel-heading">
@@ -69,6 +66,7 @@
                                 </span>
                                         <select class="form-control" name="" id="">
                                             <option value="">Cumulative</option>
+                                            <option value="">Trend</option>
                                         </select>
                                     </div>
                                 </form>
@@ -77,10 +75,10 @@
                                 <form action="">
                                     <div class="input-group">
                                         <span class="input-group-btn">
-                                    <button class="btn btn-default">View</button>
+                                    <button class="btn btn-default">Data</button>
                                 </span>
                                         <select class="form-control" name="" id="">
-                                            <option value="">Cumulative</option>
+                                            <option value="">Week to Date</option>
                                         </select>
                                     </div>
                                 </form>
@@ -124,42 +122,43 @@
                 <div class="panel panel-danger">
                     <div class="panel-heading">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-sm-6">
                                 <strong>Timer</strong>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-sm-4">
                                 <strong>00:00:00</strong>
                             </div>
                         </div>
                     </div>
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-md-5 text-center cm-button-wrapper">
+                            <div class="col-md-5 text-center cm-button-wrapper col-sm-9">
                                 <strong>Production</strong>
                                 <div class="row text-center">
-                                    <div class="col-md-4">
-                                        <button class="btn btn-default"><span class="glyphicon glyphicon-play"></span>Data entry into SIBS</span></button>
+                                    <div class="col-md-4 col-sm-4">
+                                        <button class="btn btn-default"><span class="glyphicon glyphicon-play"></span>Data entry into SIBS</span>
+                                        </button>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-4">
                                         <button class="btn btn-default">Manual sorting of documents</button>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-4">
                                         <button class="btn btn-default">Check collateral against database</button>
                                     </div>
                                 </div>
                                 <div class="row text-center">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-4">
                                         <button class="btn btn-default">Check fees payment</button>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-4">
                                         <button class="btn btn-default">Check data entry</button>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-4">
                                         <button class="btn btn-default">Prepare customer listing</button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-2 cm-button-wrapper text-center">
+                            <div class="col-md-3 cm-button-wrapper text-center col-sm-3" style="border-left:1px solid #bdc3c7;">
                                 <strong>Non Production</strong>
                                 <div class="row text-center">
                                     <div class="col-md-12">
@@ -172,13 +171,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-5 cm-button-wrapper text-center">
-                                <strong>Other Production activity</strong>
-                                <div class="row text-center">
+                            <div class="col-md-4 cm-button-wrapper text-center hidden-xs hidden-sm" style="border-left:1px solid #bdc3c7;height:300px;">
+
+                                <div class="row text-center" style="border-bottom:1px solid #bdc3c7; padding-bottom:5%;">
+                                    <strong>Other Production activity</strong>
                                     <div class="cm-sel-wrapper">
-                                        <div class="col-md-4 col-md-offset-4">
+                                        <div class="col-md-7 col-md-offset-1">
                                             <div class="form-group">
-                                                <select name="" id="" class="form-control">
+                                                <select name="" id="" class="form-control" style="margin-bottom:1%;">
                                                     <option value="">Select operating unit</option>
                                                 </select>
                                                 <select name="" id="" class="form-control">
@@ -191,11 +191,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <hr>
-                                <strong>Other Non Production Activity</strong>
-                                <div class="row text-center">
+
+
+                                <div class="row text-center" style="margin-top:3%;">
+                                    <strong>Other Non Production Activity</strong>
                                     <div class="cm-sel-wrapper">
-                                        <div class="col-md-4 col-md-offset-4">
+                                        <div class="col-md-7 col-md-offset-1">
                                             <div class="form-group">
                                                 <select name="" id="" class="form-control">
                                                     <option value="">Please select</option>
