@@ -105,3 +105,86 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+.cm-table-center{
+    text-align:center;
+}
+.cm-add-margin-top {
+    margin-top: 20px;
+}
+.cm-btn-trend{
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    border:3px solid #983d33;
+    background-color:#f59389;
+    color:black;
+    padding:10px;
+}
+.cm-go-down{
+        position: absolute;
+    bottom: 0;
+    margin-bottom: -40px;
+    text-align: center;
+    margin-left: -60px;
+    font-size: 0.9em;
+}
+.cm-add-border{
+    border:2px solid black;
+}
+.cm-icon-decrease{
+    color: #ea6153;
+}
+.cm-icon-increase{
+     color: #2ecc71;
+}
+.cm-trend-icon{
+    font-size: 2em;
+}
+.icon-stack {
+
+}
+.icon-stack .icon-stack-base {
+    font-size: 2em;
+}
+.icon-stack [class^="icon-"], .icon-stack [class*=" icon-"] {
+    display: block;
+    font-size: 1em;
+    height: 100%;
+    line-height: inherit;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.icon-stack .glyphicon{
+    font-size:4em;
+}
+.glyphicon-ban-circle
+{
+    color:red;
+}
+.stack-text{
+    position: absolute;
+    top: 0;
+    margin-left: -37px;
+    margin-top:20px;
+    color:white;
+    font-size: 0.9em;
+    
+}
+.cm-add-margin-top-stats{
+    margin-top:15px;
+}
+.cm-status{
+    padding:8px;
+    margin-left:50px;
+    background-color: #ecf0f1;
+    border-radius: 5%;
+}
+.cm-supervisor-scrollable{
+    height:300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.cm-user{
+    font-size: 5em;
+}
