@@ -15,7 +15,7 @@
         <nav class="navbar navbar-default navbar-fixed-top cm-topbar" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" >
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <a class="cm-white" href="index.html"><span class="glyphicon glyphicon-lock"></span>&nbsp;&nbsp;Logout</a>
                     </button>
                     <!--                    Title here-->
@@ -35,10 +35,10 @@
                 <nav class="navbar navbar-default">
                     <div class="container">
                         <ul class="nav navbar-nav text-center">
-                            <li  class="active"><a href="supervisor.html"><h3><span class="glyphicon glyphicon-user"></span></h3>Workbench</a></li>
-                            <li><a href="supervisor-dashboard.html"><h3><span class="glyphicon glyphicon-dashboard"></span></h3>Dashboard</a></li>
-                            <li ><a href="supervisor-setting.html"><h3><span class="glyphicon glyphicon-cog"></span></h3>Setting</a></li>
-                            <li ><a href="supervisor-maintenance.html"><h3><span class="glyphicon glyphicon-wrench"></span></h3>Maintenance</a></li>
+                            <li><a href="user.html"><h3><span class="glyphicon glyphicon-user"></span></h3>Workbench</a></li>
+                            <li><a href="user-dashboard.html"><h3><span class="glyphicon glyphicon-dashboard"></span></h3>Dashboard</a></li>
+                            <li><a href="user-setting.html"><h3><span class="glyphicon glyphicon-cog"></span></h3>Setting</a></li>
+                            <li class="active"><a href="user-maintenance.html"><h3><span class="glyphicon glyphicon-wrench"></span></h3>Maintenance</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -58,365 +58,342 @@
 
             </div>
         </div>
-        <div class="row hidden-xs hidden-sm">
-            <div class="col-md-12">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <strong>Performance</strong>
-                            </div>
-                            <div class="col-md-2 col-md-offset-2">
-                                <form action="">
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                    <button class="btn btn-default">View</button>
-                                </span>
-                                        <select class="form-control" name="" id="" onchange="selectchange($(this).val())">
-                                            <option value="cumulative">Cumulative</option>
-                                            <option value="trend">Trend</option>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-md-2">
-                                <form action="">
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                    <button class="btn btn-default">Data</button>
-                                </span>
-                                        <select class="form-control" name="" id="">
-                                            <option value="">Today</option>
-                                            <option value="">Week to Date</option>
-                                            <option value="">Month to Date</option>
-                                            <option value="">Year to Date</option>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="text-center">
-                                  
-                                    <div class="cm-chart-wrapper" id="caputil">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="text-center">
-                                    
-                                    <div class="cm-chart-wrapper" id="qualitychart">
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="text-center">
-                                 
-                                    <div class="cm-chart-wrapper" id="productivitychart">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!--        <hr style="border-top:5px solid white; margin-bottom:0px;">-->
+        <div class="row" style="text-align:center; margin-top:50px;" id="first-row">
+            <div class="col-md-4">
+                <a class="btn btn-default cm-btn-100" id="structure">
+                      <i class="fa fa-sitemap fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">Structure</span>
+                </a>
+                
+                <br> Structure
+            </div>
+            <div class="col-md-4">
+               <a class="btn btn-default cm-btn-100" id="activity">
+                      <i class="fa fa-laptop fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">Activity</span>
+                </a>
+                
+                <br> Activity
+            </div>
+            <div class="col-md-4">
+               <a class="btn btn-default cm-btn-100" id="user">
+                      <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">User</span>
+                </a>
+                
+                <br> User
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-danger">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-4">
-                                <strong>Team Status</strong>
-                            </div>
-                            <div class="col-md-5 col-sm-5">
-                                <h4>(Disbursement Unit)</h4>
-                            </div>
-                            <div class="col-md-2 col-sm-2">
-                                <div class="row cm-status">
-                                   
-                                    <div class="col-md-4" style="padding:0"><span class="glyphicon glyphicon-record" style="color:#2ecc71"></span> 6</div>
-                                    <div class="col-md-4" style="padding:0"><span class="glyphicon glyphicon-record" style="color:#f1c40f"></span> 2</div>
-                                    <div class="col-md-4" style="padding:0"><span class="glyphicon glyphicon-record" style="color:#e74c3c"></span> 2</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="cm-supervisor-scrollable">
-                                 <div class="row" style="padding:20px;margin-left:35px;">
-                                     <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                   <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#Derrick" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#2ecc71;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Derrick
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Login 8.32am</strong>
-                                    <p>Active 3 hours </p>
+        <div class="row" style="text-align:center; margin-top:80px;" id="second-row">
+            <div class="col-md-4">
+               <a class="btn btn-default cm-btn-100" id="systemParam">
+                      <i class="fa fa-tachometer fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">System Parameter</span>
+                </a>
+                
+                <br> System Parameter
 
-                                    </div>
-                                   </div>
-                                    
-                                </div>
-                                <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                    <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#SitiAishah" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#2ecc71;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Siti Aishah
-
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Login 10.43am</strong>
-                                    <p>Active 10 minutes</p>
-
-                                    </div>
-                                   </div>
-                                </div>
-                                <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                    <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#Normah" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#2ecc71;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Normah
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Login 8.12am</strong>
-                                    <p>Active 45 minutes </p>
-
-                                    </div>
-                                   </div>
-                                </div>
-                                <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                    <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#JennyYeo" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#f1c40f;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Jenny Yeo
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Login 8.31am</strong>
-                                    <p>Idle 17 minutes</p>
-
-                                    </div>
-                                   </div>
-                                </div>
-                                <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                    <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#Vickness" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#e74c3c;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Vickness
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Offline</strong>
-                                
-
-                                    </div>
-                                   </div>
-                                </div>
-                                 </div>
-                                <div class="row" style="padding:20px;margin-left:35px;">
-                                     <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                   <div class="row" >
-                                       <div class="col-md-5" style="text-align: center;">
-                                        <a href="#" id="#Mahmud" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#2ecc71;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Mahmud
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Login 9.32am</strong>
-                                    <p>Active 1 hours </p>
-
-                                    </div>
-                                   </div>
-                                    
-                                </div>
-                                <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                    <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#Jagathes" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#2ecc71;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Jagathes
-
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Login 7.12am</strong>
-                                    <p>Idle 45 minutes </p>
-
-                                    </div>
-                                   </div>
-                                </div>
-                                <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                    <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#BruceLi" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#2ecc71;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Bruce Li
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Login 9.12am</strong>
-                                    <p>Active 3 hours </p>
-
-                                    </div>
-                                   </div>
-                                </div>
-                                <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                    <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#Mohammad" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#f1c40f;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Mohammad 
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Login 8.39am</strong>
-                                    <p>Idle 3 hours</p>
-
-                                    </div>
-                                   </div>
-                                </div>
-                                <div style="width:19%;float:left;position:relative;margin-left: 5px;margin-right: 5px;">
-                                    <div class="row">
-                                       <div class="col-md-5" style="text-align: center;">
-                                           <a href="#" id="#Kamisah" data-toggle="modal" data-target="#modalone"><span class="glyphicon glyphicon-user cm-user" style="color:#e74c3c;border-radius:10%;background-color:#ecf0f1;"></span></a>
-                                        Kamisah
-                                    </div>
-                                    <div class="col-md-7">
-                                    <strong>Offline</strong>
-                                
-
-                                    </div>
-                                   </div>
-                                </div>
-                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-
+            <div class="col-md-4">
+                <a class="btn btn-default cm-btn-100" id="dataEdit">
+                      <i class="fa fa-pencil fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">Data Editing</span>
+                </a>
+                
+                <br> Data Editing
+            </div>
+            <div class="col-md-4">
+               <a class="btn btn-default cm-btn-100" id="access">
+                      <i class="fa fa-lock fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">Access</span>
+                </a>
+                
+                <br> Access
+            </div>
         </div>
+
+        <div class="row" style="text-align:center; margin-top:50px;" id="third-row">
+            <div class="col-md-4">
+               <a class="btn btn-default cm-btn-100" id="market">
+                      <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">Market</span>
+                </a>
+                
+                <br> Market
+
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-default cm-btn-100" id="department">
+                      <i class="fa fa-building-o fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">Department</span>
+                </a>
+                
+                <br> Department
+            </div>
+            <div class="col-md-4">
+               <a class="btn btn-default cm-btn-100" id="operatingUnit">
+                      <i class="fa fa-th-large fa-5x" aria-hidden="true"></i>
+                    <span class="sr-only">Operating Unit</span>
+                </a>
+                
+                <br> Operating Unit
+            </div>
+        </div>
+
     </div>
 
     <!--   Modal-->
     <div class="modal fade" id="modalone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Please Key In :</h4>
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-md-3" style="text-align:center">
-                            <span class="glyphicon glyphicon-user cm-user" style="color:#2ecc71;border-radius:10%;background-color:#ecf0f1;"></span>
-                                       <br>
-                                        <b>Mahmud</b> 
-                        </div>
-                        <div class="col-md-9">
-                            <p><b>Login time:</b>   9.32am</p>
-                             <p><b>Status:</b>  Active 1 hours</p>
-                                 <p><b>Current activity:</b>  Check collateral against database</p>
+                        <form action="" class="form-horizontal">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="col-sm-4 control-label">Completed Volume :</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" class="col-sm-4 control-label">Rejected Volume :</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
 
- 
-
-                        </div>
-                    </div>
-                    <div class="row cm-add-margin-top">
-                        <div class="col-md-12">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th>
-                                            Activity
-                                        </th>
-                                        <th>
-                                            Start Time
-                                        </th>
-                                         <th>
-                                            Stop Time
-                                        </th>
-                                         <th>
-                                            Volume
-                                        </th>
-                                        <th>
-                                            Total Time
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            Data entry into SIBS
-                                        </td>
-                                        <td>
-                                            9.40 am
-                                        </td>
-                                        <td>
-                                            10.13am
-                                        </td>
-                                        <td>
-                                            34
-                                        </td>
-                                        <td>
-                                            33 minutes
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Manual sorting  of documents
-                                        </td>
-                                        <td>
-                                            10.17 am
-                                        </td>
-                                        <td>
-                                            10.42am
-                                        </td>
-                                        <td>
-                                            58
-                                        </td>
-                                        <td>
-                                           25 minutes
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="modalNext">Submit</button>
                 </div>
             </div>
         </div>
     </div>
-    
+    <!--    modal preparing -->
+    <div class="modal fade" id="modaltwo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Reject Information :</h4>
+                    <h5 class="modal-title" id="myModalSubtitle">Operating Unit : Disbursement</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form action="" class="form-horizontal">
+                            <div class="col-md-12">
+                                <table class="table table-bordered table-hover cm-table-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Missing customer information</th>
+                                            <th>Missing document</th>
+                                            <th>Incomplete information</th>
+                                            <th>Wrong amount</th>
+                                            <th>Wrong address</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </form>
+                    </div>
+                    <form action="" class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-2">
+                                <strong>Reject(s) identified</strong>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control">
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="row cm-add-margin-top">
+                            <div class="col-md-4 col-md-offset-2">
+                                <strong>Reject(s) information enter</strong>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control">
+                            </div>
+
+
+
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    modal checking -->
+    <div class="modal fade" id="modalthree" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Reject Information :</h4>
+                    <h5 class="modal-title" id="myModalSubtitle">Operating Unit : Disbursement</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form action="" class="form-horizontal">
+                            <div class="col-md-12">
+                                <table class="table table-bordered table-hover cm-table-center">
+                                    <thead>
+                                        <tr>
+                                            <th>Maker name</th>
+                                            <th>Incorrect information key in</th>
+                                            <th>Insufficient information key in</th>
+                                            <th>No information key in</th>
+                                            <th>Wrong address</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Neethan</strong> </td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Abdullah</strong></td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Ethan</strong></td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Siti</strong></td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Chong</strong></td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </form>
+                    </div>
+                    <form action="" class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-4 col-md-offset-2">
+                                <strong>Reject(s) identified</strong>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control">
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="row cm-add-margin-top">
+                            <div class="col-md-4 col-md-offset-2">
+                                <strong>Reject(s) information enter</strong>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control">
+                            </div>
+
+
+
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/highcharts/highcharts.js"></script>
     <script>
-   var h1 = document.getElementsByTagName('h6')[0],
-    seconds = 0, minutes = 0, hours = 0,
-    t;
+        $('#third-row').hide();
+        $('#structure').click(function(){
+            $('#third-row').show();
+            $('#second-row').hide();
+            $('#first-row').hide();
+        });
+        var h1 = document.getElementsByTagName('h6')[0],
+            seconds = 0,
+            minutes = 0,
+            hours = 0,
+            t;
 
-function add() {
-    seconds++;
-    if (seconds >= 60) {
-        seconds = 0;
-        minutes++;
-        if (minutes >= 60) {
-            minutes = 0;
-            hours++;
+        function add() {
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes >= 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+
+            h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+
+            timer();
         }
-    }
-    
-    h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
 
-    timer();
-}
-function timer() {
-    t = setTimeout(add, 1000);
-}
+        function timer() {
+            t = setTimeout(add, 1000);
+        }
     </script>
     <script>
         $(function () {
@@ -523,8 +500,8 @@ function timer() {
                     text: 'Productivity'
                 },
                 subtitle: {
-                            text: '(Rate per Hour)'  
-                        },
+                    text: '(Rate per Hour)'
+                },
                 xAxis: {
                     categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
                 },
@@ -661,7 +638,7 @@ function timer() {
                             text: 'Productivity'
                         },
                         subtitle: {
-                            text: '(Rate per Hour)'  
+                            text: '(Rate per Hour)'
                         },
                         xAxis: {
                             categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
@@ -768,7 +745,7 @@ function timer() {
                             text: 'Productivity'
                         },
                         subtitle: {
-                            text: '(Rate per Hour)'  
+                            text: '(Rate per Hour)'
                         },
                         xAxis: {
                             categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -798,10 +775,36 @@ function timer() {
             }
         }
         var currentSelectedType = "";
-//        $('#mahmud').on('click', function () {
-//            $('#modalone').modal('show');
-//            
-//        });
+        $('#one').on('click', function () {
+            currentSelectedType = "one";
+            if ($(this).hasClass('cm-proplay')) {
+                $('#two').prop('disabled', true);
+                $('#three').prop('disabled', true);
+                $('#four').prop('disabled', true);
+                $('#five').prop('disabled', true);
+                $('#six').prop('disabled', true);
+                timer();
+                $(this).removeClass('cm-proplay');
+                $(this).addClass('cm-prostop');
+
+            } else {
+                $('#two').prop('disabled', false);
+                $('#three').prop('disabled', false);
+                $('#four').prop('disabled', false);
+                $('#five').prop('disabled', false);
+                $('#six').prop('disabled', false);
+                h1.textContent = "00:00:00";
+                clearTimeout(t);
+                seconds = 0;
+                minutes = 0;
+                hours = 0;
+                $("#timer").text("00:00:00");
+                $(this).removeClass('cm-prostop');
+                $(this).addClass('cm-proplay');
+                $('#modalone').modal('show');
+            }
+
+        });
         $('#two').on('click', function () {
             currentSelectedType = "two";
             if ($(this).hasClass('cm-proplay')) {
@@ -821,15 +824,15 @@ function timer() {
                 $('#six').prop('disabled', false);
                 h1.textContent = "00:00:00";
                 clearTimeout(t);
-                seconds = 0; 
-                minutes = 0; 
+                seconds = 0;
+                minutes = 0;
                 hours = 0;
                 $(this).removeClass('cm-prostop');
                 $(this).addClass('cm-proplay');
                 $('#modalone').modal('show');
             }
         });
-        
+
         $('#three').on('click', function () {
             currentSelectedType = "three";
             if ($(this).hasClass('cm-proplay')) {
@@ -849,8 +852,8 @@ function timer() {
                 $('#six').prop('disabled', false);
                 h1.textContent = "00:00:00";
                 clearTimeout(t);
-                seconds = 0; 
-                minutes = 0; 
+                seconds = 0;
+                minutes = 0;
                 hours = 0;
                 $(this).removeClass('cm-prostop');
                 $(this).addClass('cm-proplay');
@@ -876,8 +879,8 @@ function timer() {
                 $('#six').prop('disabled', false);
                 h1.textContent = "00:00:00";
                 clearTimeout(t);
-                seconds = 0; 
-                minutes = 0; 
+                seconds = 0;
+                minutes = 0;
                 hours = 0;
                 $(this).removeClass('cm-prostop');
                 $(this).addClass('cm-proplay');
@@ -892,20 +895,20 @@ function timer() {
                 $('#four').prop('disabled', true);
                 $('#one').prop('disabled', true);
                 $('#six').prop('disabled', true);
-                timer();                
+                timer();
 
                 $(this).removeClass('cm-proplay');
                 $(this).addClass('cm-prostop');
             } else {
-                                 $('#two').prop('disabled', false);
+                $('#two').prop('disabled', false);
                 $('#three').prop('disabled', false);
                 $('#four').prop('disabled', false);
                 $('#one').prop('disabled', false);
                 $('#six').prop('disabled', false);
                 h1.textContent = "00:00:00";
                 clearTimeout(t);
-                seconds = 0; 
-                minutes = 0; 
+                seconds = 0;
+                minutes = 0;
                 hours = 0;
                 $(this).removeClass('cm-prostop');
                 $(this).addClass('cm-proplay');
@@ -924,29 +927,29 @@ function timer() {
                 $(this).removeClass('cm-proplay');
                 $(this).addClass('cm-prostop');
             } else {
-                                 $('#two').prop('disabled', false);
+                $('#two').prop('disabled', false);
                 $('#three').prop('disabled', false);
                 $('#four').prop('disabled', false);
                 $('#five').prop('disabled', false);
                 $('#one').prop('disabled', false);
                 h1.textContent = "00:00:00";
                 clearTimeout(t);
-                seconds = 0; 
-                minutes = 0; 
+                seconds = 0;
+                minutes = 0;
                 hours = 0;
                 $(this).removeClass('cm-prostop');
                 $(this).addClass('cm-proplay');
                 $('#modalone').modal('show');
             }
         });
-        $('#modalNext').on('click', function(){
-           $('#modalone').modal('hide');
-            if(currentSelectedType == "one" || currentSelectedType == "two" || currentSelectedType == "three"){
+        $('#modalNext').on('click', function () {
+            $('#modalone').modal('hide');
+            if (currentSelectedType == "one" || currentSelectedType == "two" || currentSelectedType == "three") {
                 $('#modaltwo').modal('show');
-            }else{
-                 $('#modalthree').modal('show');
+            } else {
+                $('#modalthree').modal('show');
             };
-            
+
         });
     </script>
 </body>
