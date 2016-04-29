@@ -188,3 +188,23 @@ body {
 .cm-user{
     font-size: 5em;
 }
+
+.cm-setting-panel{
+    border : 2px solid #EBCCD1;
+}
+.cm-setting-panel h3{
+    padding-left:8%; 
+}
+.cm-setting-panel .cm-setting-content{
+    padding-left: 4%;
+    padding-top: 3%;
+}
+.cm-setting-panel{
+    
+    padding-right: 2%;
+}
+.cm-setting-button{
+    padding-left: 47%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
