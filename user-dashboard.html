@@ -35,10 +35,10 @@
                 <nav class="navbar navbar-default">
                     <div class="container">
                         <ul class="nav navbar-nav text-center">
-                            <li  ><a href="user.html"><h3><span class="glyphicon glyphicon-user"></span></h3>Workbench</a></li>
+                            <li><a href="user.html"><h3><span class="glyphicon glyphicon-user"></span></h3>Workbench</a></li>
                             <li class="active"><a href="user-dashboard.html"><h3><span class="glyphicon glyphicon-dashboard"></span></h3>Dashboard</a></li>
-                            <li ><a href="user-setting.html"><h3><span class="glyphicon glyphicon-cog"></span></h3>Setting</a></li>
-                            <li ><a href="user-maintenance.html"><h3><span class="glyphicon glyphicon-wrench"></span></h3>Maintenance</a></li>
+                            <li><a href="user-setting.html"><h3><span class="glyphicon glyphicon-cog"></span></h3>Setting</a></li>
+                            <li><a href="user-maintenance.html"><h3><span class="glyphicon glyphicon-wrench"></span></h3>Maintenance</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -65,10 +65,10 @@
                     <div class="col-md-4" style="text-align:center;">
                         <div class="btn-group btn-group-justified" role="group" aria-label="...">
                             <div class="btn-group" role="group">
-                                <button class="btn btn-info" id="trend-btn"><span class="glyphicon glyphicon-stats"></span> Trend View</button>
+                                <button class="btn btn-info cm-active" id="trend-btn"><span class="glyphicon glyphicon-stats"></span> Trend View</button>
                             </div>
-                            <div class="btn-group" role="group">
-                                <button class="btn" id="statistical-btn"><span class="glyphicon glyphicon-list-alt"></span> Statistical View</button>
+                            <div class="btn-group " role="group">
+                                <button class="btn btn-info " id="report-btn" style="margin-left:10px;"><span class="glyphicon glyphicon-list-alt"></span> Report View</button>
                             </div>
                         </div>
                     </div>
@@ -130,14 +130,14 @@
                     <div class="col-md-10">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="cm-add-border" id="caputil">
+                                <div class="cm-add-border" id="caputil" style="width:530px;">
 
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="text-center">
 
-                                    <div class="cm-add-border" id="productivity">
+                                    <div class="cm-add-border" id="productivity" style="width:530px;">
 
                                     </div>
                                 </div>
@@ -147,7 +147,7 @@
                             <div class="col-md-6">
                                 <div class="text-center">
 
-                                    <div class="cm-add-border" id="accuracy">
+                                    <div class="cm-add-border" id="accuracy" style="width:530px;">
 
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@
                             <div class="col-md-6">
                                 <div class="text-center">
 
-                                    <div class="cm-add-border" id="ooe">
+                                    <div class="cm-add-border" id="ooe" style="width:530px;">
 
                                     </div>
                                 </div>
@@ -216,7 +216,262 @@
             </div>
         </div>
 
-        <div class="panel panel-danger" id="stat-view-result">
+        <div class="panel panel-danger" id="report-view-result">
+            <div class="panel-heading" style="text-align:center">
+                <h5><strong>Data from Jan to April 2016</strong> </h5>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="cm-align-center" style="background-color:#c0392b;color:white;">
+                                    <th rowspan="2" class="cm-align-center"></th>
+                                    <th colspan="3" class="cm-align-center">CUR</th>
+                                    <th colspan="3" class="cm-align-center">Productivity</th>
+                                    <th colspan="3" class="cm-align-center">Accuracy</th>
+                                    <th colspan="3" class="cm-align-center">Overall Operational Efficiency (OOE)</th>
+                                </tr>
+
+                                <tr class="cm-align-center" style="background-color:#e74c3c;color:white;">
+
+                                    <th class="cm-align-center">Actual </th>
+                                    <th class="cm-align-center">Target</th>
+                                    <th class="cm-align-center">Variance</th>
+                                    <th class="cm-align-center">Actual </th>
+                                    <th class="cm-align-center">Target</th>
+                                    <th class="cm-align-center">Variance</th>
+                                    <th class="cm-align-center">Actual </th>
+                                    <th class="cm-align-center">Target</th>
+                                    <th class="cm-align-center">Variance</th>
+                                    <th class="cm-align-center">Actual </th>
+                                    <th class="cm-align-center">Target</th>
+                                    <th class="cm-align-center">Variance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        CBO MY
+                                    </td>
+                                    <td class="cm-align-center">
+                                        27,123
+                                    </td>
+                                    <td class="cm-align-center">
+                                        27,632
+
+                                    </td>
+                                    <td class="cm-align-center">
+                                        -1.8%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        95.2%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+
+                                    </td>
+                                    <td class="cm-align-center">
+                                        1.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.3%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        0.2%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.3%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        0.2%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        WBO MY
+                                    </td>
+                                    <td class="cm-align-center">
+                                        27,123
+                                    </td>
+                                    <td class="cm-align-center">
+                                        27,632
+
+                                    </td>
+                                    <td class="cm-align-center">
+                                        -1.8%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        95.2%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+
+                                    </td>
+                                    <td class="cm-align-center">
+                                        1.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.3%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        0.2%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.3%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        0.2%
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        CBO & WMO MY
+                                    </td>
+                                    <td class="cm-align-center">
+                                        27,123
+                                    </td>
+                                    <td class="cm-align-center">
+                                        27,632
+
+                                    </td>
+                                    <td class="cm-align-center">
+                                        -1.8%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        95.2%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+
+                                    </td>
+                                    <td class="cm-align-center">
+                                        1.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.3%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        0.2%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.3%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        94.1%
+                                    </td>
+                                    <td class="cm-align-center">
+                                        0.2%
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="cm-align-center"><b>Report Filter</b></h4>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row cm-add-margin-top">
+                            <div class="col-md-6">
+                                <form action="">
+                                    <div class="form-group">
+                                       <div class="col-md-6">
+                                           <label for="marketSelect">Market :   </label>
+                                       </div>
+                                        
+                                        <div class="col-md-6">
+                                            <select name="cars" multiple class="form-control" id="marketSelect">
+                                            
+                                            <option value="saab">WBO MY</option>
+                                            <option value="opel">CBO & WBO MY</option>
+                                        </select>
+                                        </div>
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6 cm-add-margin-top">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn btn-info"><span class="glyphicon glyphicon-plus"></span> Add</button>
+                                        <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select name="cars" multiple class="form-control" id="marketSelect">
+                                            <option value="volvo">CBO MY</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row cm-add-margin-top">
+                            <div class="col-md-6">
+                                <form action="">
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <label for="marketSelect">Information :   </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select name="cars" multiple class="form-control" id="marketSelect">
+                                            
+                                            <option value="saab">Actual production hours</option>
+                                            <option value="opel">Standard production hour</option>
+                                             <option value="saab">Defect volume</option>
+                                            <option value="opel">Total volume</option>
+                                        </select>
+                                        </div>
+                                        
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6 cm-add-margin-top">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn btn-info"><span class="glyphicon glyphicon-plus"></span> Add</button>
+                                        <button class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select name="cars" multiple class="form-control" id="marketSelect">
+                                           <option value="volvo">Available hours</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="text-align:center;margin-top: 120px;">
+                        <button class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panel panel-danger" id="dashboard-view-result">
             <div class="panel-heading" style="text-align:center">
                 <h5><strong>Data from Jan to April 2016</strong> </h5>
             </div>
@@ -225,50 +480,34 @@
                     <thead>
                         <tr>
                             <th></th>
-                            <th>
+                            <th class="cm-align-center">
                                 OOE
-                                <br> (%)
+                                <br>(%)
                             </th>
-                            <th>
+                            <th class="cm-align-center">
                                 CUR
-                                <br> (%)
+                                <br>(%)
                             </th>
-                            <th>
+                            <th class="cm-align-center">
                                 Quality
-                                <br> (%)
+                                <br>(%)
                             </th>
-                            <th>
+                            <th class="cm-align-center">
                                 Productivity
-                                <br> (RPH)
+                                <br>(RPH)
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                           <td >
-                                <div class="row cm-add-margin-top-stats">
-                                    <div class="col-md-6">
 
-                                        <button class="btn" > Consumer Banking Operations (CBO)</button>
-                                        <br>
-                                    </div>
-                                
-                                </div>
-                                
-                                <div class="row cm-add-margin-top-stats">
-                                    <div class="col-md-6">
-                                        <button class="btn" >Wholesale Banking Operations (WBO)</button>
-                                        <br>
-                                    </div>
-                                    
-                                </div>
-                                
-                                <div class="row cm-add-margin-top-stats">
-                                    <div class="col-md-6">
-                                        <button class="btn" >CBO & WBO MY</button>
-                                        <br>
-                                    </div>
-                                    
+                            <td>
+                                <div class="row">
+
+
+                                    <button class="btn btn-default cm-btn-trend-view"> Consumer Banking Operations (CBO)</button>
+
+
                                 </div>
                             </td>
                             <td>
@@ -278,27 +517,42 @@
                                     </div>
                                     <div class="col-md-6">
 
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-increase">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+  
+</span>
                                     </div>
                                 </div>
-                                
-                                <div class="row">
+                            </td>
+                            <td>
+                                <div class="row ">
                                     <div class="col-md-6">
                                         <button class="btn"> 67.9 </button>
                                     </div>
                                     <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-top cm-trend-icon cm-icon-increase"></i><i class="stack-text">3.5</i></span>
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-decrease">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-down fa-stack-1x fa-inverse"></i>
+  
+</span>
                                     </div>
                                 </div>
-                                
-                                <div class="row">
+                            </td>
+                            <td>
+                                <div class="row ">
                                     <div class="col-md-6">
                                         <button class="btn"> 67.9 </button>
                                     </div>
                                     <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-decrease">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-down fa-stack-1x fa-inverse"></i>
+  
+</span>
                                     </div>
                                 </div>
                             </td>
@@ -308,94 +562,164 @@
                                         <button class="btn"> 67.9 </button>
                                     </div>
                                     <div class="col-md-6">
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-increase">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+  
+</span>
 
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-top cm-trend-icon cm-icon-increase"></i><i class="stack-text">3.5</i></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <button class="btn"> 67.9 </button>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <button class="btn"> 67.9 </button>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <button class="btn"> 67.9 </button>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <button class="btn"> 67.9 </button>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <button class="btn"> 67.9 </button>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <button class="btn"> 67.9 </button>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <button class="btn"> 67.9 </button>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <button class="btn"> 67.9 </button>
-                                    </div>
-                                    <div class="col-md-6">
-
-                                        <span class="icon-stack"><i class="glyphicon glyphicon-triangle-bottom cm-trend-icon cm-icon-decrease"></i><i class="stack-text">3.5</i></span>
                                     </div>
                                 </div>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <div class="row">
+
+                                    <button class="btn btn-default cm-btn-trend-view">Wholesale Banking Operations (WBO)</button>
+
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn"> 67.9 </button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-decrease">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-down fa-stack-1x fa-inverse"></i>
+  
+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn"> 67.9 </button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-increase">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+  
+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn"> 67.9 </button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-decrease">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-down fa-stack-1x fa-inverse"></i>
+  
+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn"> 67.9 </button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-decrease">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-down fa-stack-1x fa-inverse"></i>
+  
+</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="row">
+
+                                    <button class="btn btn-default cm-btn-trend-view">CBO & WBO MY</button>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn"> 67.9 </button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-increase">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+  
+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn"> 67.9 </button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-decrease">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-down fa-stack-1x fa-inverse"></i>
+  
+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn"> 67.9 </button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-decrease">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-down fa-stack-1x fa-inverse"></i>
+  
+</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button class="btn"> 67.9 </button>
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        3.5
+                                        <span class="fa-stack fa-lg cm-icon-increase">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+  
+</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -406,18 +730,44 @@
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/highcharts/highcharts.js"></script>
         <script>
-            $('#stat-view-result').hide();
-            $('#trend-btn').click(function () {
-                $('#statistical-btn').removeClass('btn-info');
-                $('#trend-btn').addClass('btn-info');
-                $('#trend-view-result').show();
-                $('#stat-view-result').hide();
-            });
-            $('#statistical-btn').click(function () {
-                $('#statistical-btn').addClass('btn-info');
-                $('#trend-btn').removeClass('btn-info');
+            $('#trend-view-result').hide();
+            $('#report-view-result').hide();
+
+            $('#report-btn').click(function () {
+                $('#trend-btn').removeClass('cm-active');
+                $('#dashboard-btn').removeClass('cm-active');
+                $('#report-btn').addClass('cm-active');
                 $('#trend-view-result').hide();
-                $('#stat-view-result').show();
+                $('#dashboard-view-result').hide();
+                $('#report-view-result').show();
+            });
+
+            $('#trend-btn').parent().on('click', '#trend-btn', function () {
+                $('#trend-btn').addClass('cm-active');
+                $('#report-btn').removeClass('cm-active');
+
+                $('#trend-btn').html('<span class="glyphicon glyphicon-stats"></span> Dashboard View');
+                $('#trend-btn span').removeClass('glyphicon-stats');
+                $('#trend-btn span').addClass('glyphicon-dashboard');
+                $('#trend-btn').attr('id', 'dashboard-btn');
+
+                $('#trend-view-result').show();
+                $('#dashboard-view-result').hide();
+                $('#report-view-result').hide();
+            });
+
+            $('#trend-btn').parent().on('click', '#dashboard-btn', function () {
+                $('#dashboard-btn').addClass('cm-active');
+                $('#report-btn').removeClass('cm-active');
+
+                $('#dashboard-btn').html('<span class="glyphicon glyphicon-dashboard"></span> Trend View');
+                $('#dashboard-btn span').removeClass('glyphicon-dashboard');
+                $('#dashboard-btn span').addClass('glyphicon-stats');
+                $('#dashboard-btn').attr('id', 'trend-btn');
+
+                $('#trend-view-result').hide();
+                $('#dashboard-view-result').show();
+                $('#report-view-result').hide();
 
             });
             $(function () {

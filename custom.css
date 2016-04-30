@@ -211,3 +211,13 @@ body {
 .cm-btn-100{
     width:101px;
 }
+.cm-btn-trend-view{
+    float:left;
+    margin-left: 20px;
+}
+.cm-align-center{
+    text-align: center;
+}
+.cm-active{
+    border: 3px solid #3498db;
+}
